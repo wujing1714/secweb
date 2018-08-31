@@ -3,7 +3,7 @@ package com.sec.demo.controller;
 import java.util.concurrent.TimeUnit;
 
 import com.sec.demo.pojo.User;
-import com.sec.demo.redis.RedisService;
+import com.sec.demo.util.redis.RedisService;
 import com.sec.demo.service.UserService;
 import org.junit.Assert;
 import org.junit.Test;

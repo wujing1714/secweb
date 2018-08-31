@@ -1,4 +1,4 @@
-package com.sec.demo.redis;
+package com.sec.demo.util.redis;
 
 public interface RedisService {
 	/**

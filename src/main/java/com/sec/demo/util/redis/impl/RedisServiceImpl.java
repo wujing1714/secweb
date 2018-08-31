@@ -1,10 +1,10 @@
-package com.sec.demo.redis.impl;
+package com.sec.demo.util.redis.impl;
 
 import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
-import com.sec.demo.redis.RedisService;
+import com.sec.demo.util.redis.RedisService;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisStringCommands;
 import org.springframework.data.redis.connection.RedisConnection;
