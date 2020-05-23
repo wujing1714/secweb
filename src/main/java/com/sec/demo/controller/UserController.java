@@ -1,6 +1,7 @@
 package com.sec.demo.controller;
 
 import com.sec.demo.util.AESUtil;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -17,7 +19,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 public class UserController {
-
+ 
     @RequestMapping(value = "/sublogin",method = RequestMethod.POST)
     public String subLogin(String username,String password,HttpSession session,Model model){
         Subject subject = SecurityUtils.getSubject();
@@ -34,7 +36,7 @@ public class UserController {
         	return "login";
         }
         model.addAttribute("hello","Hello, Spring Boot!");
-        return "index";
+        return "surveillance";
     }
 
     @RequestMapping(value = "/test")

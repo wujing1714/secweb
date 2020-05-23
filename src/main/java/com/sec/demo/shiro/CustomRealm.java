@@ -16,9 +16,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by WangZJ on 2018/8/12.
- */
 public class CustomRealm extends AuthorizingRealm {
 
     @Autowired

@@ -9,9 +9,6 @@ import org.apache.ibatis.annotations.Select;
 
 
 
-/**
- * Created by WangZJ on 2018/8/13.
- */
 @Mapper
 public interface UserDao {
     @Select("select password from user where username = #{username}")

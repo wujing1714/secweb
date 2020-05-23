@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">播放/暂停</button> 
+  <button onclick="makeBig()">放大</button>
+  <button onclick="makeSmall()">缩小</button>
+  <button onclick="makeNormal()">普通</button>
+  <br> 
+  <video id="video1" width="420">
+    <source type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
+</div> 
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+myVideo.src="video/myvedio1.mp4";
+
+function playPause()
+{ 
+	if (myVideo.paused) 
+	  myVideo.play(); 
+	else 
+	  myVideo.pause(); 
+} 
+
+	function makeBig()
+{ 
+	myVideo.width=1060; 
+} 
+
+	function makeSmall()
+{ 
+	myVideo.width=320; 
+} 
+
+	function makeNormal()
+{ 
+	myVideo.width=420; 
+} 
+</script> 
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Important jquery image player stylesheet -->
+<link rel="stylesheet" href="jquery-image-player-min.css">
+  
+<!--  jQuery 1.7+  -->
+<script src="jquery-1.10.2.min.js"></script>
+  
+<!--  jQuery 1.8+  -->
+<script src="jquery-ui.min.js"></script>
+  
+<!-- Include js plugin -->
+<script src="jquery-image-player-min.js"></script>        
+</head>
+<body>
+<div id="uipg-video-player">
+  <ul>
+      <li data-duration="0"><img  src="video/viewphoto.jpg"></li>
+<li data-duration="1000"><img src="video/2.jpg"></li>"
+<li data-duration="1000"><img src="video/2.jpg"></li>"
+<li data-duration="1000"><img src="video/2.jpg"></li>"
+<li data-duration="1000"><img src="video/2.jpg"></li>"
+<li data-duration="1000"><img src="video/2.jpg"></li>"
+    <!--   <li data-duration="50">Your Content</li>
+      <li data-duration="50">Your Content</li>
+      <li data-duration="50">Your Content</li>
+      <li data-duration="50">Your Content</li>
+      <li data-duration="50">Your Content</li>
+      <li data-duration="50">Your Content</li> -->
+  </ul>
+</div>
+   <button onclick="playPause()">播放/暂停</button> 
+   <button onclick="makeBig()">放大</button>
+   <button onclick="makeSmall()">缩小</button>
+   <button onclick="makeNormal()">普通</button>
+    <br> 
+	<video id="video" width="420" height="560" autoplay> </video>
+ 
+	 <canvas id="canvas" width="420" height="560"></canvas>
+ 
+</body>
+</html>
+ <script type="text/javascript">
+$(function(){
+	var options = {
+			
+	}
+});
+ $(document).ready(function(){
+	  $("#uipg-video-player").jsVideoPlayer();
+ 
+	});     
+ //document.getElementById("uipg-video-player").innerHTML+="<li data-duration=\"50\"><img src=\"video/"+2+".jpg\"><\/li>";
+ 
+var myVideo=document.getElementById("video"); 
+ 
+	 function playPause()
+	 { 
+	 	if (myVideo.paused) 
+	 	  myVideo.play(); 
+	 	else 
+	 	  myVideo.pause(); 
+	 } 
+	
+	 	function makeBig()
+	 { 
+	 	myVideo.width=800; 
+	 } 
+	
+	 	function makeSmall()
+	 { 
+	 	myVideo.width=320; 
+	 } 
+	
+	 	function makeNormal()
+	 { 
+	 	myVideo.width=420; 
+	 } 
+	// Put event listeners into place
+	window.addEventListener("DOMContentLoaded",
+		function() {
+			// Grab elements, create settings, etc.
+			/* var canvas = document.getElementById("canvas"), 
+			context = canvas.getContext("2d"),  */
+			video = document.getElementById("video"), 
+			videoObj = {
+				"video" : true
+			}, errBack = function(error) {
+				console.log("Video capture error: ", error.code);
+			};
+ 
+			video.src = "video/myvedio1.mp4";
+			video.play();
+	/* 		// Put video listeners into place
+			if (navigator.getUserMedia) { // Standard
+				navigator.getUserMedia(videoObj, function(stream) {
+					video.src = stream;
+					video.play();
+				}, errBack);
+			} else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
+				navigator.webkitGetUserMedia(videoObj, function(
+						stream) {
+					video.src = window.webkitURL
+							.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			} else if (navigator.mozGetUserMedia) { // Firefox-prefixed
+				navigator.mozGetUserMedia(videoObj,
+						function(stream) {
+							video.src = window.URL
+									.createObjectURL(stream);
+							video.play();
+						}, errBack);
+			} */
+		 
+		}, false);  
+</script>
